@@ -37,7 +37,7 @@ final class DiscoveryTest extends TestCase
     }
 
     /** @param array<string, mixed> $meta */
-    private static function discoverWith(array $meta, string $jwks = null, string $issuer = self::ISSUER): array
+    private static function discoverWith(array $meta, ?string $jwks = null, string $issuer = self::ISSUER): array
     {
         return Discovery::discover($issuer, self::fetcher([
             self::ISSUER . Discovery::WELL_KNOWN_PATH => json_encode($meta, JSON_THROW_ON_ERROR),
