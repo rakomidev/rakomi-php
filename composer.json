@@ -1,0 +1,32 @@
+{
+    "name": "rakomi/sdk",
+    "description": "PHP SDK for Rakomi, EU-native authentication as a service: OpenID Connect discovery and JWKS retrieval.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://rakomi.com",
+    "keywords": ["rakomi", "oidc", "oauth", "authentication", "jwks"],
+    "support": {
+        "issues": "https://github.com/rakomidev/rakomi-php/issues",
+        "security": "https://rakomi.com/.well-known/security.txt"
+    },
+    "require": {
+        "php": ">=8.1",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": { "Rakomi\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Rakomi\\Tests\\": "tests/" }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
